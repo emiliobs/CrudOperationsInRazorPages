@@ -26,6 +26,9 @@
                 {
                     @foreach (var book in Model.Books)
                     {
+                        <tr>
+
+                       
                     <td>@Html.DisplayFor(Model => book.Id)</td>
                     <td>@Html.DisplayFor(Model => book.BookTitle)</td>
                     <td>@Html.DisplayFor(Model => book.BookDescription)</td>
@@ -34,6 +37,7 @@
                         <a asp-page="./Edit" asp-route-id="@book.Id" class="btn btn-warning">Edir.</a>
                         <a asp-page="./Delete" asp-route-id="@book.Id" class="btn btn-danger">Delete.</a>
                     </td>
+                        </tr>
                     }
                 }
                 else
